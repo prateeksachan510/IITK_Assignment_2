@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Order
+{
+    public static void main()
+    {
+        int a,b,c;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Three no.s");
+        a=sc.nextInt();
+        b=sc.nextInt();
+        c=sc.nextInt();
+        if(a>b&&b>c)
+            System.out.println("No.s are in Decreasing order::"+a+","+b+","+c);
+        else if(a<b&&b<c)
+            System.out.println("No.s are in Increasing order::"+a+","+b+","+c);
+        else
+            System.out.println("No.s entered are in Random Order::"+a+","+b+","+c);
+    }
+}
