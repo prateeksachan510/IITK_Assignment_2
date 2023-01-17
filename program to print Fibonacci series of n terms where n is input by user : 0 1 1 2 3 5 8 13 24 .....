@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Fibonacci {
+    public static void main() {
+        int n, i, sum = 0, x1 = 0, x2 = 1;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the no. of terms in FIBONACCI series");
+        n = sc.nextInt();
+        System.out.print("Fibonacci Series ::" + x1 + " " + x2 + "  ");
+        for (i = 1; i <= n; i++) {
+            sum = x1 + x2;
+            System.out.print(sum + "    ");
+            x1 = x2;
+            x2 = sum;
+        }
+
+    }
+}
+
+
