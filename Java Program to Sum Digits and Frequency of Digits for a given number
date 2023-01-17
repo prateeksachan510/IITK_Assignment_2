@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Sum_Frequency
+{
+    public static void main()
+    {
+        Scanner sc=new Scanner(System.in);
+        int i,j,sum=0,frq;
+        long n;
+        char t=' ';
+        System.out.println("Enter a No.");
+        n= sc.nextLong();
+        long X=n;
+        String N=""+n;
+        for(i=0;i<N.length();i++)
+        {
+            n=X;
+            frq=0;
+            t=N.charAt(i);
+            for(j=0;j<N.length();j++)
+            {
+                if(t==N.charAt(j))
+                    frq++;
+            }
+            while(n>0)
+            {
+
+                long x=n%10;
+              if(i==1)
+                sum=sum+(int) x;
+                n=n/10;
+
+            }
+            System.out.println("Frequency of "+t+"in "+n+" is ::"+frq);
+        }
+        System.out.println("Sum of Digits of "+X+"::"+sum);
+
+
+    }
+}
