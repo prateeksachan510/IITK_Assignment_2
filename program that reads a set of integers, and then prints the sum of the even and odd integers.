@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Sum_EV_ODD
+{
+    public static void main()
+    {
+        int n,sum_od=0,sum_ev=0,x;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a No.");
+        n=sc.nextInt();
+
+        while (n>0)
+        {
+            x=n%10;
+            if(x%2==0)
+                sum_ev=sum_ev+x;
+            else
+                sum_od=sum_od+x;
+            n=n/10;
+        }
+        System.out.println("Sum of even DIgits of no.::"+sum_ev);
+        System.out.println("Sum of odd Digits of no.::"+sum_od);
+
+    }
+}
