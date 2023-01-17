@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Prime_Fibonacci
+{
+    public static void main()
+    {
+        int n,i,x1=0,x2=1,sum=0;
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the no. of terms in FIBONACCI Series:");
+        n=sc.nextInt();
+        int Fibo[]=new int[n];
+        for(i=0;i<n;i++)
+        {
+            if(i==0)
+                Fibo[0]=0;
+            else if(i==1)
+                Fibo[1]=1;
+            else
+            {
+                Fibo[i]=x1+x2;
+                x1=x2;
+                x2=Fibo[i];
+            }
+            System.out.print(Fibo[i]+"  ");
+        }
+        System.out.println();
+        System.out.println("Prime Term of Given Fibonacci is::");
+        for(i=0;i<n;i++)
+        {
+            int c=0;
+            for(int j=2;j<=(int)(Math.sqrt(Fibo[i]));j++)
+            {
+                if(Fibo[i]%j==0)
+                    c++;
+            }
+            if(c==0)
+                System.out.print(Fibo[i]+"   ");
+        }
+
+
+    }
+}
