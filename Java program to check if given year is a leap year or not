@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Leap_year
+{
+    public static void main()
+    {
+        int yr;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a YEAR");
+        yr= sc.nextInt();
+        if(yr%4==0) {
+            if (yr % 100 != 0) {
+                System.out.println("Year is a LEAP Year:" + yr);
+            } else if (yr % 100 == 0 && yr % 400 == 0) {
+                System.out.println("Year is a CENTURY as well as LEAP Year:" + yr);
+            }
+        }
+        else
+            System.out.println("Given year is not a LEAP Year:"+yr);
+
+        }
+    }
+
