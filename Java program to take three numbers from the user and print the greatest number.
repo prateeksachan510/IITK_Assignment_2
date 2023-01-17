@@ -1,0 +1,20 @@
+import java.util.Scanner; //Importing java.util package containing Scanner class
+public class Compare    //Class open
+{
+    public static void main()    //main function to compare the greatest of 3 numbers
+    {
+        int a,b,c;   //variables to store 3 numbers
+        Scanner sc=new Scanner(System.in);   //Creating Scanner class object to take input to variables by user
+        System.out.println("Enter 3 no.s");
+        a=sc.nextInt();
+        b=sc.nextInt();
+        c=sc.nextInt();
+        /*If/Else statements to check the greatest no. */
+        if(a>b&&a>c)
+            System.out.println("A is grater than B&C::"+a);
+        else if(b>a&&b>c)
+            System.out.println("B is greater than A&C::"+b);
+        else
+            System.out.println("C is greater than A&C::"+c);
+    }
+}
